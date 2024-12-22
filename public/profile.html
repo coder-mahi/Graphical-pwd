@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <style>
+    /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container to center the content */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Header styles */
+header h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+/* Profile details */
+.profile-details {
+  margin-top: 30px;
+}
+
+.profile-details .detail {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.profile-details h2 {
+  font-size: 1.3em;
+  color: #3498db;
+}
+
+.profile-details p {
+  font-size: 1.1em;
+  color: #34495e;
+  margin-top: 5px;
+}
+
+.profile-details .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-details button {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 30px;
+}
+
+.profile-details button:hover {
+  background-color: #c0392b;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to Your Profile</h1>
+      <p>Here are your login details.</p>
+    </header>
+
+    <section class="profile-details">
+      <div class="detail">
+        <h2>Name:</h2>
+        <p id="name">John Doe</p> <!-- Replace this with the user's name from DB -->
+      </div>
+      <div class="detail">
+        <h2>Email:</h2>
+        <p id="email">johndoe@example.com</p> <!-- Replace this with the user's email from DB -->
+      </div>
+      <div class="detail">
+        <h2>Selected Image:</h2>
+        <div class="image">
+          <img id="selectedImage" src="images/demo1.png" alt="Selected Image">
+        </div>
+      </div>
+
+      <button onclick="window.location.href='/logout'">Logout</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Your Website Name. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+        window.onload = function() {
+      const user = JSON.parse(sessionStorage.getItem('userData')); // Replace with actual data source
+      if (user) {
+        document.getElementById('name').textContent = user.name;
+        document.getElementById('email').textContent = user.email;
+        document.getElementById('selectedImage').src = `images/demo${user.selectedImage}.png`; // Dynamically set the image
+      } else {
+        alert('User data not found');
+        window.location.href = 'http://localhost:5000/home';  // Use backend URL to access /home
+    }
+    };
+  </script>
+</body>
+</html>

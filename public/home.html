@@ -1,24 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  padding: 20px;
+}
+
+/* Container to center the content */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+/* Header styles */
+header h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #7f8c8d;
+}
+
+/* Welcome message section */
+.welcome-message {
+  margin-top: 30px;
+}
+
+.welcome-message p {
+  font-size: 1.1em;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.welcome-message button {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.welcome-message button:hover {
+  background-color: #2980b9;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+footer p {
+  margin-top: 20px;
+}
+
+  </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Welcome to the Home Page!</h1>
+      <p>You have successfully logged in.</p>
+    </header>
 
-  <h2>Welcome to the Home Page</h2>
-  <p>You are successfully logged in!</p>
-  
-  <button onclick="logout()">Logout</button>
-
-  <script>
-    function logout() {
-      // You can clear session storage or handle logout logic here
-      alert('You have logged out successfully!');
-      window.location.href = 'login.html';  // Redirect to login page after logging out
-    }
-  </script>
-
+    <section class="welcome-message">
+      <p>Explore more features of our website. We are glad to have you here!</p>
+      <button onclick="window.location.href='/profile'">Go to Profile</button>
+    </section>
+    
+    <footer>
+      <p>&copy; 2024 Grapghcal Authentication. All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>

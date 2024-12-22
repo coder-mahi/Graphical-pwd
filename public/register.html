@@ -4,42 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Register</h1>
+    <form id="registerForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-  <form id="registerForm">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" required>
-    <br>
-    <button type="submit">Register</button>
-  </form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="image-selection">
+        <p>Select an image:</p>
+        <input type="radio" name="selectedImage" value="1" id="img1" required>
+        <label for="img1"><img src="images/demo1.png" alt="Image 1"></label>
+
+        <input type="radio" name="selectedImage" value="2" id="img2" required>
+        <label for="img2"><img src="images/demo2.png" alt="Image 2"></label>
+
+        <input type="radio" name="selectedImage" value="3" id="img3" required>
+        <label for="img3"><img src="images/demo3.png" alt="Image 3"></label>
+
+        <input type="radio" name="selectedImage" value="4" id="img4" required>
+        <label for="img4"><img src="images/demo4.png" alt="Image 4"></label>
+
+        <input type="radio" name="selectedImage" value="5" id="img5" required>
+        <label for="img5"><img src="images/demo5.png" alt="Image 5"></label>
+
+        <input type="radio" name="selectedImage" value="6" id="img6" required>
+        <label for="img6"><img src="images/demo6.png" alt="Image 6"></label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+
+    <div id="responseMessage"></div>
+  </div>
 
   <script>
-    document.getElementById('registerForm').addEventListener('submit', async function(event) {
-      event.preventDefault();
+    const registerForm = document.querySelector('#registerForm');
+    registerForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
+      const formData = new FormData(registerForm);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const password = formData.get('password');
+      const selectedImage = formData.get('selectedImage');
 
-      const response = await fetch('http://localhost:5000/api/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password }),
-      });
+      try {
+        const response = await fetch('http://localhost:5000/api/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, password, selectedImage }),
+        });
 
-      const data = await response.json();
-
-      if (response.ok) {
-        alert(data.message);
-      } else {
-        alert(data.error || 'Registration failed');
+        const data = await response.json();
+        if (response.ok) {
+          document.getElementById('responseMessage').innerHTML = data.message;
+        } else {
+          document.getElementById('responseMessage').innerHTML = data.error;
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('responseMessage').innerHTML = 'An error occurred while registering.';
       }
     });
   </script>
