@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Graphical Password</title>
+  <style>
+    /* Reset basic styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff4e50, #f9d423); /* Gradient background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      overflow: hidden;
+      animation: backgroundAnimation 10s infinite alternate; /* Animation for background */
+    }
+
+    /* Background animation */
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(135deg, #ff4e50, #f9d423);
+      }
+      100% {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+      }
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      width: 500px;
+      text-align: center;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: scale(1.05); /* Slightly zoom in on hover */
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      outline: none;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus {
+      border-color: #00c6ff;
+      box-shadow: 0 0 5px rgba(0, 198, 255, 0.7);
+    }
+
+    .image-selection {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 20px 0;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .password-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s ease-in-out;
+    }
+
+    .password-image:hover {
+      transform: scale(1.2);
+      box-shadow: 0 0 10px rgba(0, 198, 255, 0.6);
+    }
+
+    .password-image.selected {
+      border: 4px solid #00c6ff;
+      box-shadow: 0 0 15px rgba(0, 198, 255, 0.6);
+    }
+
+    button {
+      background: #00c6ff;
+      color: white;
+      padding: 18px 35px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+      width: 100%;
+      transition: background 0.3s ease, transform 0.3s;
+    }
+
+    button:hover {
+      background: #0072ff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #666;
+      letter-spacing: 0.5px;
+    }
+
+    footer a {
+      color: #0072ff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter your username" required>
+    
+    <div class="image-selection">
+      <img src="demo1.png" alt="img1" class="password-image" data-image="1">
+      <img src="demo2.png" alt="img2" class="password-image" data-image="2">
+      <img src="demo3.png" alt="img3" class="password-image" data-image="3">
+      <img src="demo4.png" alt="img4" class="password-image" data-image="4">
+      <img src="demo5.png" alt="img5" class="password-image" data-image="5">
+      <img src="demo6.png" alt="img6" class="password-image" data-image="6">
+    </div>
+
+    <button onclick="login()">Login</button>
+
+    <footer>
+      <p>&copy; 2024 Graphical Password Authentication</p>
+      <p><a href="#">Forgot Password?</a></p>
+    </footer>
+  </div>
+
+  <script>
+    let selectedImages = [];
+    const images = document.querySelectorAll('.password-image');
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        const imgId = image.getAttribute('data-image');
+        if (selectedImages.includes(imgId)) {
+          selectedImages = selectedImages.filter(id => id !== imgId);
+          image.classList.remove('selected');
+        } else {
+          selectedImages.push(imgId);
+          image.classList.add('selected');
+        }
+      });
+    });
+
+    function login() {
+      const username = document.getElementById('username').value;
+      if (username && selectedImages.length > 0) {
+        console.log('Logged in with:', username, selectedImages);
+        alert('Login Successful!');
+      } else {
+        alert('Please select images for your password!');
+      }
+    }
+  </script>
+
+</body>
+</html>
