@@ -1,17 +1,10 @@
-<h1 align="center">Hi 👋, I'm Mahesh Shinde   <img src="/assets/stats.gif" width="50"></h1>
+<h1 align="center">Hi 👋, I'm Mahesh Shinde</h1>
 <h3 align="center">A passionate Full Stack Web Developer from India</h3>
 
-<a href="#" onclick="return false;">
-  <img alt="MasterHead" src="/assets/header.png">
-</a>
-<br/>
-<a href="#" onclick="return false;">
-  <img alt="GIF Example" src="/assets/CLine.gif">
-</a>
+![MasterHead](https://cdn.vectorstock.com/i/500p/73/74/programmer-develop-code-doodle-concept-developer-vector-41927374.avif)
 
-<a href="#" onclick="return false;">
-  <img align="right" alt="coding" width="350" src="https://i.pinimg.com/originals/ce/69/4f/ce694f560636dffcf42ecf40d4f2f962.gif">
-</a>
+<img align="right" alt="coding" width="400" src="https://gifdb.com/images/high/animated-man-computer-coding-nae6mec378lsg1i3.webp">
+<br/>
 
 ### 🌟 About Me  
 🔭 I’m currently working on **Private Projects**  
@@ -21,6 +14,7 @@
 📫 Reach me at: **maheshshinde9100@gmail.com**  
 📄 Know about my experiences: [Resume](https://maheshshinde9100.hackerresume.io/cdbe784f-7325-4ca3-a047-9a2c4ec314cc)  
 ⚡ Fun fact: **I think I'm Extrovert**  
+
 
 <br/><br/>
 <h3 align="center">Connect with me:</h3>
@@ -58,31 +52,19 @@
 <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> 
 <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> 
-<!--<a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> -->
-<a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> 
+<a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="40" height="40"/> </a> 
 <a href="https://www.sqlite.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="40" height="40"/> </a> 
 <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> 
 <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.svgrepo.com/show/508915/flask.svg" alt="flask" width="40" height="40"/> </a></p>
+<br/>
 
-<!-- ![GIF Example](/assets/CLine.gif) -->
-<div align="center">
-    <img src="/assets/CLine.gif" alt="GIF Example">
-</div>
-<div align="center">
-<img src="https://leetcode.card.workers.dev/coder-mahi?theme=auto&font=baloo&extension=null" alt="LeetCode Stats"/>
-  </div>
 <div align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=coder-mahi&theme=dark&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats" /><br/>
     <img src="https://github-readme-streak-stats.herokuapp.com/?user=coder-mahi&theme=dark&hide_border=false" alt="GitHub Streak Stats" /><br/>
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=coder-mahi&theme=dark&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages" />
 </div>
 <br/>
-<!-- <p align="left"> <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="coder-mahi" /> </p>  -->
 
-<!-- ![SVG Example](/assets/github-snake.svg) -->
-[![Netlify Status](https://api.netlify.com/api/v1/badges/43a533e8-16e0-456b-b191-37f63b943feb/deploy-status)](https://app.netlify.com/sites/insta-clone-by-mahesh-shinde/deploys)
-<div align="center">
-    <img src="/assets/github-snake.svg" alt="SVG Example">
-</div>
+<p align="left"> <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="coder-mahi" /> </p> 
 
-![GIF Example](/assets/CLine.gif)
+
